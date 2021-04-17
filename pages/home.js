@@ -11,6 +11,7 @@ function Home() {
     <Layout title="web 8 Home" isNav>
       <div className="container">
         <h1>halaman home</h1>
+        <p>Env = {process.env.api}</p>
         <Link href="/about">
           <a>pindah ke about</a>
         </Link>
