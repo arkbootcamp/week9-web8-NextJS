@@ -17,7 +17,7 @@ function Product2({ product}) {
           <li key={item.id}>{item.name}</li>
         )}
       </ul>
-      <input type="text" name="" id="" onKeyUp={(e) => handleSearch(e)}/>
+      {/* <input type="text" name="" id="" onKeyUp={(e) => handleSearch(e)}/> */}
       {/* <button onClick={handleSearch}>search</button> */}
       <hr/>
       {/* <ul>
@@ -51,10 +51,10 @@ Product2.getInitialProps = async(ctx) =>{
   // const result = await axios.get(`https://jsonplaceholder.typicode.com/posts/` + search)
   // const posts = result.data
   // console.log(posts);
-  // const resultUser = await axios.get('https://jsonplaceholder.typicode.com/users')
-  // const users = resultUser.data
+  const result = await axios.get('http://localhost:4500/v1/products')
+  const products = result.data.data
   return {
-    product: [],
+    product: products,
     // users: users
   }
 }
